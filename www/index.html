@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+<head>
+
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta http-equiv="content-security-policy" content="default-src 'self';
+    img-src 'self' 'unsafe-inline';
+    connect-src 'self' 'unsafe-inline';
+    font-src https://use.fontawesome.com 'self';
+    style-src https://use.fontawesome.com 'unsafe-inline' 'self' ;
+    script-src 'self' 'unsafe-inline'" ; />
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>ReviewR </title>
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css" />
+
+
+</head>
+
+
+
+<body>
+    <section class="page active" id="home">
+        <header>
+            <h1>Reviews</h1>
+            <button id="btnAdd" data-target="add">+Add</button>
+        </header>
+        <div>
+            <ul class="review-list">
+                <!-- list of saved reviews gets added here -->
+            </ul>
+        </div>
+    </section>
+
+    <section class="page" id="details">
+        <header>
+            <button id="btnDetailsBack" data-target="home">Back</button>
+            <h1>Details</h1>
+        </header>
+        <div>
+            <p><img src="#" alt="" id="imgDetails" /></p>
+            <p>Item Name</p>
+            <p><span>5</span>/5</p>
+            <p><button id="btnDelete">Delete</button></p>
+        </div>
+    </section>
+
+    <section class="page" id="add">
+        <header>
+            <button id="btnAddBack" data-target="home">Back</button>
+            <h1>Add New Review</h1>
+        </header>
+        <div>
+            <div class="photo-button">
+                <button id="btnTakePhoto"><i class="fas fa-camera fa-9x"></i></button>
+            </div>
+            <div class="photo-form">
+                <p><img src="#" alt="" id="imgAdd" /></p>
+                <p><label for="name"><input type="text" id="name" placeholder="Item Name" /></label></p>
+                <div class="rating" id="rating">
+                    <h3>Please rate:</h3>
+                    <input type="radio" id="star5" name="rating" value="5" />
+                    <label for="star5" title="Rocks!">5 stars</label>
+                    <input type="radio" id="star4" name="rating" value="4" />
+                    <label for="star4" title="Pretty good">4 stars</label>
+                    <input type="radio" id="star3" name="rating" value="3" />
+                    <label for="star3" title="Meh">3 stars</label>
+                    <input type="radio" id="star2" name="rating" value="2" />
+                    <label for="star2" title="Kinda bad">2 stars</label>
+                    <input type="radio" id="star1" name="rating" value="1" />
+                    <label for="star1" title="Sucks big time">1 star</label>
+                </div>
+                <p><button id="btnSave">Save Review</button></p>
+            </div>
+        </div>
+    </section>
+
+    <script src="cordova.js"></script>
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>
