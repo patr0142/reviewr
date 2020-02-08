@@ -1,3 +1,5 @@
+/*css*/
+
 *,
 *:before,
 *:after {
@@ -65,6 +67,14 @@ body {
     grid-area: title;
 }
 
+#imgAdd{
+    align-content: center;
+}
+
+#rating{
+    text-align: center;
+}
+
 #home header button {
     font-weight: 300;
     color: #007aff;
@@ -85,7 +95,7 @@ body {
 }
 
 .rating {
-    float: left;
+    align-items: center;
 }
 
 #btnTakePhoto{
@@ -98,6 +108,10 @@ body {
     text-align: center;
     position: relative;
     margin-top: 55%;
+}
+
+#btnSave{
+    align-items: center;
 }
 
 .fas.fa-camera.fa-9x::before {
@@ -115,9 +129,7 @@ body {
     background-color: #9099A2;
 }
 
-/* :not(:checked) is a filter, so that browsers that don’t support :checked don’t 
-   follow these rules. Every browser that supports :checked also supports :not(), so
-   it doesn’t make the test unnecessarily selective */
+
 .rating:not(:checked)>input {
     position: absolute;
     top: -9999px;
